@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+    justify-content: flex-end;
+    grid-template-columns: 1fr 1fr;
+}
+
+.speakerbox-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.panel-location {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    color: black;
+    padding: 0.5rem;
+    width: 650px;
+}
+
+.rsvp-btn{
+    color: white;
+    background-color: orangered;
+    border: 1px solid orangered;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+}

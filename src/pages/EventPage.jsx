@@ -61,7 +61,7 @@ export default function EventPage() {
           <div>
             <h3>Event Tags</h3>
             {eventDetails?.eventTags?.map((tags) => (
-              <p style={{color: "orangered", border: "1px solid orangred", display: "inline-block", padding: "0.5rem 1rem", margin: "10px"}}>{tags}</p>
+              <p style={{color: "orangered", border: "1px solid orangered", display: "inline-block", padding: "0.5rem 1rem", margin: "10px"}}>{tags}</p>
             ))}
           </div>
         </div>

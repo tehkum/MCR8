@@ -10,7 +10,9 @@ export default function EventBox({ props }) {
         <img src={props.eventThumbnail} alt={props.id} />
         <p>{props.eventType} event</p>
       </div>
-      <p>{props.eventStartTime}</p>
+      {/* <p>{props.eventStartTime}</p> */}
+      <p>{new Date(props.eventStartTime).toLocaleString("en-US",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' })}</p>
+
       <h2>{props.title}</h2>
     </div>
   );

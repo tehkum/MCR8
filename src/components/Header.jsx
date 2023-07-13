@@ -6,6 +6,7 @@ export default function Header() {
 
   return (
     <>
+    <div style={{width: "100%", display: "flex", justifyContent: "space-between", padding: "1rem", flexWrap: "wrap"}}>
       <NavLink to="/">
         <svg
           viewBox="0 0 111 40"
@@ -19,7 +20,7 @@ export default function Header() {
           ></path>
         </svg>
       </NavLink>
-      <input type="search" onChange={e=>setSearch(e.target.value)}/>
+      <input type="search" onChange={e=>setSearch(e.target.value)} placeholder="Search" style={{width: "400px"}}/></div>
       <hr/>
     </>
   );

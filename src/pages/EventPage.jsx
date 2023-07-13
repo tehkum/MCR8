@@ -23,6 +23,9 @@ export default function EventPage() {
     setEventDetails(eventData?.find((events) => events?.id === eventId));
   }, [eventId]);
 
+  const date2 = new Date();
+
+
   return (
     <Container maxWidth="xl">
       <div className="container">
@@ -58,7 +61,7 @@ export default function EventPage() {
           <div>
             <h3>Event Tags</h3>
             {eventDetails?.eventTags?.map((tags) => (
-              <p>{tags}</p>
+              <p style={{color: "orangered", border: "1px solid orangred", display: "inline-block", padding: "0.5rem 1rem", margin: "10px"}}>{tags}</p>
             ))}
           </div>
         </div>
@@ -66,12 +69,14 @@ export default function EventPage() {
           <div className="panel-location">
             <span>
               <AccessTimeIcon />
-              {eventDetails?.eventStartTime}
-              {eventDetails.eventEndTime}
+              <p><b>From: </b>{new Date(eventDetails?.eventStartTime).toLocaleString("en-US",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' })}</p>
+              <p><b>To: </b>{new Date(eventDetails?.eventEndTime).toLocaleString("en-US",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' })}</p>
+              
             </span>
             <span>
-              <AddLocationIcon /> {eventDetails?.location}
-              {eventDetails?.address}
+              <AddLocationIcon /> 
+              <p>{eventDetails?.location}</p>
+              <p>{eventDetails?.address}</p>
             </span>
             <span>
               <b>Price: </b> {eventDetails?.price}
@@ -83,7 +88,7 @@ export default function EventPage() {
               <SpeakerBox props={speaker} />
             ))}
           </div>
-          {rsvped.find(id=>id===eventDetails.id) ? <button className="rsvp-btn" disabled>RSVP</button> : <button onClick={handleOpen} className="rsvp-btn">RSVP</button>}
+          {rsvped.find(id=>id===eventDetails.id) ? <button className="rsvp-btn" style={{backgroundColor: "grey"}} disabled>RSVP</button> : <button onClick={handleOpen} className="rsvp-btn">RSVP</button>}
         </div>
       </div>
 

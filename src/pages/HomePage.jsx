@@ -18,9 +18,9 @@ export default function HomePage() {
     <>
       <CssBaseline />
       <Container maxWidth="xl">
-        <div>
+        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center"}}>
           <h1>Meetup Events</h1>
-          <select onChange={(e)=>setEventType(e.target.value)}>
+          <select onChange={(e)=>setEventType(e.target.value)} style={{height: "40px"}}>
             <option value="all">Select Event Type</option>
             <option value="Offline">Offline</option> 
             <option value="Online">Online</option> 

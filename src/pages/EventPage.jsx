@@ -27,7 +27,7 @@ export default function EventPage() {
 
 
   return (
-    <Container maxWidth="xl">
+    <Container>
       <div className="container">
         <div className="panel-left">
           <h1>{eventDetails.title}</h1>

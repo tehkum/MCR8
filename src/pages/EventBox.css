@@ -1,7 +1,9 @@
 .container {
     display: grid;
     justify-content: flex-end;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    gap: 10px;
+
 }
 
 .speakerbox-body {
